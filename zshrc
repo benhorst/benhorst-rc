@@ -32,9 +32,16 @@ function gstats() {
 # my favorite way to add to the git index
 alias gap="git add --patch"
 
+# checking what's in the index, exactly
+alias gdc="git diff --cached"
+
 # which freaking process id is using that port so I can kill -9 it?
 # USAGE: psbyport <port-number>
 find_ps_by_port() {
   netstat -pal --numeric-ports | sed -n 's/.*\:'"$1"'[[:space:]]\+.*LISTEN[[:space:]]*\([[:digit:]]\+\)\/.*/\1/p'
+}
+# this works on OSX
+find_ps_by_port() {
+  lsof -i tcp:$1
 }
 alias psbyport='find_ps_by_port'
