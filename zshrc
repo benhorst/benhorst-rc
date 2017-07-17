@@ -51,3 +51,9 @@ alias nodegif='node --eval "require(\"gify\")(process.argv[2], process.argv[3] |
 
 # foolish but effective way to generate UUIDs on the command line for mock data, etc; requires node and npm:uuid globally installed
 alias uuid='node --eval "console.log(require(\"uuid\").v4())"'
+
+# concatenate a few movie files listed line by line in the movie.txt file
+# format is: 
+## file './foo.mpg'
+## file './foo2.mpg'
+alias concatmovie='ffmpeg -f concat -safe 0 -i movie.txt -c copy output.mpg'
