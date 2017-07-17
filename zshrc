@@ -45,3 +45,6 @@ find_ps_by_port() {
   lsof -i tcp:$1
 }
 alias psbyport='find_ps_by_port'
+
+# make a named gif from an mp4, mpg, or other movie file, requires node and npm:gify to be globally installed
+alias nodegif='node --eval "require(\"gify\")(process.argv[2], process.argv[3] || \"out.gif\")"'
