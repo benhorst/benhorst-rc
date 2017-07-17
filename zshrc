@@ -48,3 +48,6 @@ alias psbyport='find_ps_by_port'
 
 # make a named gif from an mp4, mpg, or other movie file, requires node and npm:gify to be globally installed
 alias nodegif='node --eval "require(\"gify\")(process.argv[2], process.argv[3] || \"out.gif\")"'
+
+# foolish but effective way to generate UUIDs on the command line for mock data, etc; requires node and npm:uuid globally installed
+alias uuid='node --eval "console.log(require(\"uuid\").v4())"'
