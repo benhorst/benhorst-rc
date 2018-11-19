@@ -29,11 +29,20 @@ function gstats() {
  git log --numstat --pretty="%H" --author=$1 $2..HEAD | awk 'NF==3 {plus+=$1; minus+=$2} END {printf("+%d, -%d\n"    , plus, minus)}'
 }
 
+# git status is super useful
+alias gst="git status"
+
+# pushing a new branch has never been so painless!
+alias gpsup="git push --set-upstream origin $(git_current_branch)
+
 # my favorite way to add to the git index
 alias gap="git add --patch"
 
 # checking what's in the index, exactly
 alias gdc="git diff --cached"
+
+# what changed recently, you ask?
+glg='git log --stat'
 
 # which freaking process id is using that port so I can kill -9 it?
 # USAGE: psbyport <port-number>
