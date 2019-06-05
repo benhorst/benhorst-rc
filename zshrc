@@ -33,7 +33,7 @@ function gstats() {
 alias gst="git status"
 
 # pushing a new branch has never been so painless!
-alias gpsup="git push --set-upstream origin $(git_current_branch)
+alias gpsup="git push --set-upstream origin $(git_current_branch)"
 
 # my favorite way to add to the git index
 alias gap="git add --patch"
