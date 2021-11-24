@@ -42,7 +42,7 @@ alias gap="git add --patch"
 alias gdc="git diff --cached"
 
 # what changed recently, you ask?
-glg='git log --stat'
+alias glg="git log --stat"
 
 # which freaking process id is using that port so I can kill -9 it?
 # USAGE: psbyport <port-number>
