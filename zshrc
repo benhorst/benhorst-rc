@@ -68,3 +68,6 @@ alias uuid='node --eval "console.log(require(\"uuid\").v4())"'
 alias concatmovie='ffmpeg -f concat -safe 0 -i movie.txt -c copy output.mpg'
 
 alias rampaaage='pgrep node | xargs kill -9'
+
+# nerds know
+alias nrd='npm run dev'
