@@ -68,10 +68,10 @@ alias uuid='node --eval "console.log(require(\"uuid\").v4())"'
 alias concatmovie='ffmpeg -f concat -safe 0 -i movie.txt -c copy output.mpg'
 
 # remove local branches starting with my name
-gbsweepme="git branch -vv | grep 'gone]' | grep '^  benhorst/' | awk '{print $1}' | xargs git branch -D"
+alias gbsweepme="git branch -vv | grep 'gone]' | grep '^  benhorst/' | awk '{print $1}' | xargs git branch -D"
 
 #remove all of them
-gbsweep="git branch -vv | grep 'gone]' | awk '{print $1}\' | xargs git branch -D'"
+alias gbsweep="git branch -vv | grep 'gone]' | awk '{print $1}\' | xargs git branch -D'"
 
 # blow away all node processes, background or otherwise
 alias rampaaage='pgrep node | xargs kill -9'
